@@ -232,15 +232,6 @@ npm run test:e2e:ui
 npm run test:coverage
 ```
 
-### Test Statistics
-- **Total Tests**: 49
-- **Unit Tests**: 22 (AccountsService + TransactionsService)
-- **E2E Tests**: 27 (Full API integration)
-- **Execution Time**: ~190ms
-- **Success Rate**: 100%
-
-See [TESTING.md](./TESTING.md) for detailed testing documentation.
-
 ## 🏗️ Architecture
 
 ### Project Structure
