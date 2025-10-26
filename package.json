@@ -1,0 +1,39 @@
+{
+  "name": "double-ledger",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "build": "rm -rf dist && tsc",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:unit": "vitest run src/services/__tests__",
+    "test:unit:watch": "vitest src/services/__tests__",
+    "test:e2e": "vitest run src/tests",
+    "test:e2e:watch": "vitest src/tests",
+    "test:e2e:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.5",
+    "@hono/zod-validator": "^0.7.4",
+    "better-sqlite3": "^12.4.1",
+    "hono": "^4.10.2",
+    "inversify": "^7.10.3",
+    "reflect-metadata": "^0.2.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.7",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^24.9.1",
+    "@vitest/coverage-v8": "^4.0.3",
+    "@vitest/ui": "^4.0.3",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.3",
+    "utility-types": "^3.11.0",
+    "vitest": "^4.0.3"
+  },
+  "engines": {
+    "node": ">=20.10.0"
+  }
+}
