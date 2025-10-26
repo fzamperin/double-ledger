@@ -69,6 +69,39 @@ npm run build
 npm start
 ```
 
+## 🧪 Testing
+
+### Run All Tests
+```bash
+npm test
+```
+
+### Run Unit Tests
+```bash
+# Run once
+npm run test:unit
+
+# Watch mode
+npm run test:unit:watch
+```
+
+### Run E2E Tests
+```bash
+# Run once
+npm run test:e2e
+
+# Watch mode
+npm run test:e2e:watch
+
+# UI mode
+npm run test:e2e:ui
+```
+
+### Generate Coverage Report
+```bash
+npm run test:coverage
+```
+
 ## 📚 API Documentation
 
 ### Base URL
@@ -197,39 +230,6 @@ Content-Type: application/json
 {
   "error": "Account with id 550e8400-e29b-41d4-a716-446655440000 not found"
 }
-```
-
-## 🧪 Testing
-
-### Run All Tests
-```bash
-npm test
-```
-
-### Run Unit Tests
-```bash
-# Run once
-npm run test:unit
-
-# Watch mode
-npm run test:unit:watch
-```
-
-### Run E2E Tests
-```bash
-# Run once
-npm run test:e2e
-
-# Watch mode
-npm run test:e2e:watch
-
-# UI mode
-npm run test:e2e:ui
-```
-
-### Generate Coverage Report
-```bash
-npm run test:coverage
 ```
 
 ## 🏗️ Architecture
