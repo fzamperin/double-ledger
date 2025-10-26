@@ -132,16 +132,19 @@ describe('Double-Entry Ledger API', () => {
       expect(data).toHaveProperty('entries');
       expect(data.entries).toHaveLength(2);
 
-      const resDebit = await client.accounts[':id'].$get({
-        param: { id: debitAccountId },
-      });
-      const dataDebit = (await resDebit.json()) as AccountResponse;
+      const [resDebit, resCredit] = await Promise.all([
+        client.accounts[':id'].$get({
+          param: { id: debitAccountId },
+        }),
+        client.accounts[':id'].$get({
+          param: { id: creditAccountId },
+        }),
+      ]);
+      const [dataDebit, dataCredit] = await Promise.all([
+        resDebit.json() as Promise<AccountResponse>,
+        resCredit.json() as Promise<AccountResponse>,
+      ]);
       expect(dataDebit.balance).toBe(4000);
-
-      const resCredit = await client.accounts[':id'].$get({
-        param: { id: creditAccountId },
-      });
-      const dataCredit = (await resCredit.json()) as AccountResponse;
       expect(dataCredit.balance).toBe(-1000);
     });
   });
